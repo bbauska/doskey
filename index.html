@@ -236,5 +236,111 @@ name<br></p>
 you want to check all the option available with wmic command then you
 need to use wmic /? command as shown below.<br> $ wmic /?<br></p>
 <hr>
+<h3>DOS commands: Managing directories</h3>
+<pre>
+$ Drive-letter:	Combine the relevant letter with a colon to change between drives.
+Example: C: A:
+
+$ CD Directory-name	Changes to the directory you enter.
+For example: $ cd c:\windows
+
+$ CD \	The DOS command “cd” combined with a backslash will take you to the root directory of the current drive.
+$ CD \files\photos	Navigates to the root directory and from there to the directory “files\photos”.
+$ CD ..	Jumps up one level in the directory.
+$ CD ..\files\photos	Jumps up one level in the directory and from there into the directory “files\photos”.
+
+$ DIR <Drive:\Path\to\directory	
+Shows the whole contents of a directory. Filters (so-called “wild cards”) can be used to only display certain contents. An asterisk can be used as a placeholder for any number of characters. A question mark stands in for one character.For example:dir *.txtShows all files with the file extension “.txt”.dir dat*.txtShows all files with the extension “.txt” whose names start with “dat”.dir dat1?.txtShows all files whose names consist of “dat1”, followed by one more character and the file extension “.txt”.dir /pLists the results page by page.dir /sAlso lists the contents of sub-directories.dir c:\dat*.txt /p /sLists all files on the drive C that start with “dat” and end with “.txt”. Shows them page by page.
+
+MD <Drive:\Path\to\directory	
+The DOS command “md” stands for “make directory” and creates a directory on the indicated directory level. The system does not switch to the newly created directory.
+
+RD <Drive:\Path\to\directory	The DOS command “rd” deletes the indicated directory. The directory needs to be empty. If you want the system to delete the directory together with its contents, you can use the DOS command 
+
+DELTREE (in version 6 and above).
+
+TREE <Drive:\Path\to\directory	Shows all the sub-directories (with files) in the drive or directory indicated.
+
+DOS commands: Manage files
+
+ATTRIB <Drive:\Path\to\file	You can use this DOS command to change an attribute of a file (for example, read-only mode).
+
+COMP filename1 filename2	Compares two files with each other.
+
+COPY <Drive:\Path\to\file <Drive:\Path\to\file	Copies a file into a new directory. If you change the name of the file for the new directory, the system will duplicate it.Example: copy c:\files\photos\photo1.jpgThe system will copy the file “photo1.jpg” from the directory “files\photos” into the current directory.copy c:\files\photos\photo*.jpg a:\documents\photos\Copies every file whose name starts with “photo” and ends with “.jpg” into the indicated directory - in this case a directory on Drive A.copy file01.txt file02.txtCopies the contents of the file “file01” into the file “file02” and puts it in the same directory.copy file01.txt a:\documents\file02.txtCopies the file “file01” onto a floppy disk and renames it as “file02”.copy *.txt *.docCopies all the files with the extension “.txt” and changes the extension to “.doc”. The file names remain the same.
+
+DEL <Drive:\Path\to\fileNote: ERASE is the same DOS command as DEL	Deletes the file that you’ve indicated.
+
+EDIT <Drive:\Path\to\fileNote: Before version 6, this DOS command was EDLIN	Opens the DOS editor in order to edit the selected ASCII files.
+
+FIND "String" <Drive:\Path\to\file	Searches for a string of characters in the indicated file.
+
+MORE <Drive:\Path\to\file	Shows the contents of a file page by page. Convenient for viewing long files.
+
+MOVE <Drive:\Path\to\file <Drive:\Path\to\new\directory	Moves one or more files into the indicated directory.
+
+PATH <Drive:\Searchpath	Indicates a search path that the DOS should search through for executable files.
+
+PRINT <Drive:\Path\to\file	Prints the indicated file.
+
+REN FilenameOld.txt FilenameNew.txt	Renames one or more files. You can also use it to change extensions.Example:ren filename.txt *.docChanges the extension of the file from “.txt” to “.doc”.ren *.txt *.docChanges all txt files into doc files.
+
+REPLACE <Drive1:\Path\to\file <Drive2:\Path\to\file	Replaces files in the target directory with files from the source directory.
+
+SHARE	Starts the program for file sharing and file locking.
+
+TYPE <Drive:\Path\to\file	Shows the contents of the indicated file on the screen.
+
+UNDELETE <Drive:\Path\to\file	Restores files that were deleted with DEL.
+
+VERIFY onVERIFY off	The options “on” and “off” determine whether DOS should check that write operations like copying were carried out without errors.
+
+XCOPY <Drive:\Path\to\directory <Drive:\Path\to\new\directory	This DOS command copies all files from one directory into another directory.
+Other useful DOS commands
+
+APPEND	With this DOS command, you can open programs or files in the indicated directory as if they are located in the current directory.
+
+ASSIGN	Changes the letter of the drive indicated.Example:assign a=cChanges Drive A into Drive C.
+
+BACKUPNote: In versions 6 and above, this DOS command is called MSBACKUP	Secures one or more files in a drive.
+
+BREAK	This DOS command activates/deactivates additional monitoring of CTRL + C. If Break is turned on, CTRL + C will monitor additional features like read and write operations on disks.
+
+CLS	Clears the screen.
+
+CHKDSK <Drive:\Path\to\file	This DOS command creates a status report for the storage device indicated.
+
+COMMAND	Opens a new DOS command interpreter.
+
+CTTY	Changes the standard input and standard output device for operating the computer.
+
+DATE mm-dd-yy	Shows the current date. Can also be used to change the date.
+
+DISKCOMP	Compares the contents of two disks.
+
+DISKCOPY	This DOS command duplicates a disk.
+
+ECHO	Activates or deactivates the display of text for batch files.
+
+EXIT	Closes DOS/the Command Prompt.
+
+FDISK	Sets up a hard drive.
+
+FORMAT	Formats a disk for use with DOS.Example:format a:Formats a new floppy disk in Drive A with standard capacity.
+
+HELP < DOS command	Shows the help text for the DOS command indicated.
+
+PROMPT	Changes the appearance of the DOS Command Prompt.
+
+# RESTORE <Drive1: Drive2:\Path\to\restore	Used for restoring data from a backup.Example:restore a: c:\documets\*.* 	Restores all backed-up files in Drive C in the folder “documents”.
+
+# TIME hh:mm:ss	Shows the current time. You can also change the time using this DOS command.
+
+# SET	Shows the settings of the DOS environment, with the option to change them.
+
+$ VER	Shows the DOS version number.
+
+$ VOL <Drive:	Shows the drive name and the serial number of the disk (if available).
+</pre>
   </body>
 </html>
